@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import { rateLimit } from "express-rate-limit";
+import { authorizeAPIKey } from "./middlewares/authorization.middleware";
 
 dotenv.config({});
 
@@ -14,6 +15,7 @@ const limiter = rateLimit({
 });
 
 app.use(limiter);
+app.use(authorizeAPIKey);
 
 app.get("/test", (req, res) => {
   res.send({ server_testing: "ok" });
