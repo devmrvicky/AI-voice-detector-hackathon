@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Specify ECMAScript target version: 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
+    "module": "commonjs", // Specify module code generation: 'commonjs', 'amd', 'system', 'umd', 'es6', 'es2015', 'es2020', or 'ESNext'.
+    "lib": ["ES6"], // Specify a set of bundled library declaration files
+    "outDir": "./dist", // Redirect output structure to the directory.
+    "rootDir": "./src", // Specify the root directory of input files. Only include the root directory and required directories now.
+    "strict": true, // Enable all strict type-checking options.
+    "noImplicitAny": true, // Raise error on expressions and declarations with an implied 'any' type.
+    "strictNullChecks": true, // Enable strict null checks.
+    "strictFunctionTypes": true, // Enable strict checking of function types.
+    "strictPropertyInitialization": true, // Enable strict checking of property initialization in classes.
+    "noImplicitThis": true, // Raise error on 'this' expressions with an implied 'any' type.
+    "alwaysStrict": true, // Parse in strict mode and emit "use strict" for each source file.
+    "esModuleInterop": true, // Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports.
+    // "skipLibCheck": true, // Skip type checking of declaration files.
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file.
+    "resolveJsonModule": true, // Allow importing JSON modules
+    "typeRoots": ["./node_modules/@types", "/src/types"] // Specify multiple folders that act as roots to type module resolution.
+  },
+  "include": ["src/**/*"], // Include the src directory in the compilation.
+  "exclude": ["node_modules", "/*.spec.ts"] // Exclude the node_modules directory and test files from the compilation.
+}
